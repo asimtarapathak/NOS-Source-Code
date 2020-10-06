@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1500.0" style="-fx-background-color: #3884ff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ScrollPane layoutY="95.0" prefHeight="685.0" prefWidth="218.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3000.0" prefWidth="204.0" style="-fx-background-color: #3884ff;">
+               <children>
+                  <Text layoutX="9.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Courses From Here">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Button fx:id="homebtn" layoutX="6.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#loadHomepage" prefHeight="34.0" prefWidth="190.0" style="-fx-background-color: #3884ff;" text="HOME PAGE">
+                     <font>
+                        <Font name="Lato Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="websiteBtn" layoutX="7.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#loadWebsite" prefHeight="34.0" prefWidth="190.0" style="-fx-background-color: #3884ff;" text="Website">
+                     <font>
+                        <Font name="Lato Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="lkgukg" layoutX="3.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#browseLKGUKG" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="LKG/UKG">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="101.0" layoutY="382.0" startX="-100.0" />
+                  <Text layoutX="25.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Primary Level Classes">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="drawingClass" layoutX="3.0" layoutY="615.0" mnemonicParsing="false" onMouseClicked="#browseDrawingclass" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Easy Drawing">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Text layoutX="24.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secondary Level Classes">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="handwritingClass" layoutX="3.0" layoutY="650.0" mnemonicParsing="false" onMouseClicked="#browseHandwritingclass" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Handwriting Class">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="99.0" layoutY="690.0" startX="-100.0" />
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="101.0" layoutY="124.0" startX="-100.0" />
+                  <Text layoutX="31.0" layoutY="715.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Higher Level Classes">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="99.0" layoutY="885.0" startX="-100.0" />
+                  <Text layoutX="45.0" layoutY="910.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bridge Course">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="class1Course" layoutX="4.0" layoutY="195.0" onMouseClicked="#selectClass1" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class2Course" layoutX="4.0" layoutY="234.0" onMouseClicked="#selectClass2" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class3Course" layoutX="4.0" layoutY="270.0" onMouseClicked="#selectClass3" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class4Course" layoutX="5.0" layoutY="304.0" onMouseClicked="#selectClass4" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class5Course" layoutX="5.0" layoutY="344.0" onMouseClicked="#selectClass5" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class6Course" layoutX="5.0" layoutY="419.0" onMouseClicked="#selectClass6" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class7Course" layoutX="5.0" layoutY="455.0" onMouseClicked="#selectClass7" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class8Course" layoutX="5.0" layoutY="490.0" onMouseClicked="#selectClass8" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class9Course" layoutX="5.0" layoutY="530.0" onMouseClicked="#selectClass9" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="class10Course" layoutX="4.0" layoutY="573.0" onMouseClicked="#selectClass10" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="management11" layoutX="4.0" layoutY="730.0" onMouseClicked="#selectManagement11" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="science11" layoutX="4.0" layoutY="765.0" onMouseClicked="#selectScience11" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="management12" layoutX="4.0" layoutY="800.0" onMouseClicked="#selectManagement12" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="science12" layoutX="4.0" layoutY="835.0" onMouseClicked="#selectScience12" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <Button fx:id="afterSee1" layoutX="3.0" layoutY="925.0" mnemonicParsing="false" onMouseClicked="#browseSee1" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="After SEE - 1">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="afterSee2" layoutX="3.0" layoutY="960.0" mnemonicParsing="false" onMouseClicked="#browseSee2" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="After SEE - 2">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="pclNursing" layoutX="3.0" layoutY="995.0" mnemonicParsing="false" onMouseClicked="#pclNursing" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="PCL Nursing">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="lokSewa" layoutX="3.0" layoutY="1030.0" mnemonicParsing="false" onMouseClicked="#lokSewa" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Lok Sewa">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="cmat" layoutX="3.0" layoutY="1065.0" mnemonicParsing="false" onMouseClicked="#cmat" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="CMAT">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="mbbs" layoutX="3.0" layoutY="1100.0" mnemonicParsing="false" onMouseClicked="#mbbs" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="MBBS">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="nrb" layoutX="3.0" layoutY="1135.0" mnemonicParsing="false" onMouseClicked="#nrb" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Nepal Rastra Bank">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="101.0" layoutY="1175.0" startX="-100.0" />
+                  <Text layoutX="25.0" layoutY="1200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diploma and Bachelor">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="ctevtCF" layoutX="3.0" layoutY="1220.0" mnemonicParsing="false" onMouseClicked="#ctevtCF" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="CTEVT Computer Fundamentals">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ctevtCA" layoutX="3.0" layoutY="1255.0" mnemonicParsing="false" onMouseClicked="#ctevtCA" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="CTEVT Computer Application">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ctevtITf" layoutX="3.0" layoutY="1290.0" mnemonicParsing="false" onMouseClicked="#ctevtITf" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="CTEVT IT Fundamentals">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ctevtME" layoutX="3.0" layoutY="1325.0" mnemonicParsing="false" onMouseClicked="#ctevtME" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="CTEVT Mechanical Engineering">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ctevtP" layoutX="3.0" layoutY="1360.0" mnemonicParsing="false" onMouseClicked="#ctevtP" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="CTEVT Physics">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <ChoiceBox fx:id="csit" layoutX="4.0" layoutY="1400.0" onMouseClicked="#selectCsit" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="bca" layoutX="4.0" layoutY="1435.0" onMouseClicked="#selectBca" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="bim" layoutX="4.0" layoutY="1470.0" onMouseClicked="#selectBim" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <Button fx:id="bEd" layoutX="3.0" layoutY="1505.0" mnemonicParsing="false" onMouseClicked="#bEd" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="B.Ed ICT">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <ChoiceBox fx:id="bbabbs" layoutX="4.0" layoutY="1540.0" onMouseClicked="#bbabbs" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: #3884ff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <Button fx:id="pcl" layoutX="3.0" layoutY="1575.0" mnemonicParsing="false" onMouseClicked="#pcl" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="PCL Nursing">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="101.0" layoutY="1620.0" startX="-100.0" />
+                  <Text layoutX="5.0" layoutY="1645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soft Skill and Study Guidance">
+                     <font>
+                        <Font name="Lato Regular" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="english1" layoutX="3.0" layoutY="1665.0" mnemonicParsing="false" onMouseClicked="#english1" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Learn English - 1">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="english2" layoutX="3.0" layoutY="1700.0" mnemonicParsing="false" onMouseClicked="#english2" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Learn English - 2">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="english3" layoutX="3.0" layoutY="1735.0" mnemonicParsing="false" onMouseClicked="#english3" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Learn English - 3">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="japLang" layoutX="3.0" layoutY="1770.0" mnemonicParsing="false" onMouseClicked="#japLang" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Japanese Language">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="chiLang" layoutX="3.0" layoutY="1805.0" mnemonicParsing="false" onMouseClicked="#chiLang" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Chinese Language">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ArcGIS" layoutX="3.0" layoutY="1840.0" mnemonicParsing="false" onMouseClicked="#ArcGIS" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="ArcGIS">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ITpathway" layoutX="3.0" layoutY="1875.0" mnemonicParsing="false" onMouseClicked="#ITpathway" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="IT Pathway">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="studyGuide" layoutX="3.0" layoutY="1910.0" mnemonicParsing="false" onMouseClicked="#studyGuide" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Study Guidance">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="drawing" layoutX="3.0" layoutY="1945.0" mnemonicParsing="false" onMouseClicked="#drawing" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Easy Drawing">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="101.0" layoutY="2000.0" startX="-100.0" />
+                  <Text layoutX="30.0" layoutY="2025.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional Course">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="basicComp" layoutX="3.0" layoutY="2040.0" mnemonicParsing="false" onMouseClicked="#basicComp" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Basic Computer">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="basicComp2" layoutX="3.0" layoutY="2075.0" mnemonicParsing="false" onMouseClicked="#basicComp2" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Intermediate Computer">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="win7" layoutX="3.0" layoutY="2115.0" mnemonicParsing="false" onMouseClicked="#win7" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Windows 7">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="win10" layoutX="3.0" layoutY="2150.0" mnemonicParsing="false" onMouseClicked="#win10" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Windows 10">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="powerpnt" layoutX="3.0" layoutY="2185.0" mnemonicParsing="false" onMouseClicked="#powerpnt" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="MS Powerpoint">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="word" layoutX="3.0" layoutY="2220.0" mnemonicParsing="false" onMouseClicked="#word" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="MS Word">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="tipstricks" layoutX="3.0" layoutY="2255.0" mnemonicParsing="false" onMouseClicked="#tipstricks" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Tips and Tricks">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="socialmedia" layoutX="3.0" layoutY="2290.0" mnemonicParsing="false" onMouseClicked="#socialmedia" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Social Media">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="comptiaITf" layoutX="3.0" layoutY="2325.0" mnemonicParsing="false" onMouseClicked="#comptiaITf" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Comptia IT Fundamental">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="comptiaAp" layoutX="3.0" layoutY="2360.0" mnemonicParsing="false" onMouseClicked="#comptiaAp" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Comptia A Plus">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="hwN" layoutX="3.0" layoutY="2395.0" mnemonicParsing="false" onMouseClicked="#hwN" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Hardware and Networking">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="webDev1" layoutX="3.0" layoutY="2430.0" mnemonicParsing="false" onMouseClicked="#webDev1" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="HTML - 1">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="webDev2" layoutX="3.0" layoutY="2465.0" mnemonicParsing="false" onMouseClicked="#webDev2" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="HTML - 2">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="webDev3" layoutX="3.0" layoutY="2500.0" mnemonicParsing="false" onMouseClicked="#webDev3" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="PHP">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="comptiaNp" layoutX="3.0" layoutY="2535.0" mnemonicParsing="false" onMouseClicked="#comptiaNp" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Comptia N Plus">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ipSub" layoutX="3.0" layoutY="2570.0" mnemonicParsing="false" onMouseClicked="#ipSub" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="IP Subnetting">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="gitHub" layoutX="3.0" layoutY="2605.0" mnemonicParsing="false" onMouseClicked="#gitHub" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="GitHub">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="hacking1" layoutX="3.0" layoutY="2640.0" mnemonicParsing="false" onMouseClicked="#hacking1" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Ethical Hacking Lab">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="hacking2" layoutX="3.0" layoutY="2675.0" mnemonicParsing="false" onMouseClicked="#hacking2" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Ethical Hacking Start">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="cProgramming" layoutX="3.0" layoutY="2710.0" mnemonicParsing="false" onMouseClicked="#cProgramming" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="C programming">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Line endX="104.0" endY="-3.0517578125E-5" layoutX="101.0" layoutY="2750.0" startX="-100.0" />
+                  <Text layoutX="30.0" layoutY="2770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forms and Groups">
+                     <font>
+                        <Font name="Lato Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="fbGroup" layoutX="3.0" layoutY="2790.0" mnemonicParsing="false" onMouseClicked="#fbGroup" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Facebook Study Group">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="feedbackForm" layoutX="3.0" layoutY="2825.0" mnemonicParsing="false" onMouseClicked="#feedbackForm" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Feedback Form">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="volForm" layoutX="3.0" layoutY="2860.0" mnemonicParsing="false" onMouseClicked="#volForm" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3884ff;" text="Volunteer Form">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="11.47" radius="4.6375" width="9.08" />
+                     </effect>
+                  </Button>
+                  <ImageView fx:id="fb" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="2900.0" onMouseClicked="#browseFB" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@fb.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="ig" fitHeight="30.0" fitWidth="30.0" layoutX="60.0" layoutY="2900.0" onMouseClicked="#browseIG" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@insta.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="telegram" fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="2900.0" onMouseClicked="#browseT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@telegram.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="linkedin" fitHeight="30.0" fitWidth="30.0" layoutX="155.0" layoutY="2900.0" onMouseClicked="#browseL" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@linkedin.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Text layoutX="50.0" layoutY="2980.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Rights Reserved">
+                     <font>
+                        <Font name="Lato Regular" size="12.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <WebView fx:id="webView" layoutX="223.0" layoutY="6.0" prefHeight="775.0" prefWidth="1274.0" />
+      <ImageView fitHeight="149.0" fitWidth="145.0" layoutX="28.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
